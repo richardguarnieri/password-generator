@@ -15,12 +15,16 @@ generateBtn.addEventListener("click", writePassword);
 
 // Password generation function
 const generatePassword = () => {
-  // Variables declaration for letters, digits and symbols
+  // Variables declaration for letters, digits, symbols, boolean criterias, password criteria and password
   const upperCaseletters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const lowerCaseletters = 'abcdefghijklmnopqrstuvwxyz';
   const digits = '0123456789';
   const symbols = '!@#$%&';
   let passwordLength = ''
+  let passwordUpperCaseLetters = false;
+  let passswordLowerCaseLetters = false;
+  let passwordDigits = false;
+  let passwordSymbols = false;
   let passwordCriteria = '';
   let password = ''
 
@@ -36,10 +40,18 @@ const generatePassword = () => {
     }
   };
   // Rest of password criteria prompts
-  let passwordUpperCaseLetters = confirm('Do you want to include uppercase letters (e.g. ABC)?');
-  let passswordLowerCaseLetters = confirm('Do you want to include lowercase letters (e.g. abc)?');
-  let passwordDigits = confirm('Do you want to include digits (e.g. 345)?');
-  let passwordSymbols = confirm('Do you want to include digits (e.g. @#$%)?');
+  // While loop to validate at least 1 criteria is selected
+  while ((passwordUpperCaseLetters === false) && (passswordLowerCaseLetters === false) && (passwordDigits === false) && (passwordSymbols === false)) {
+    passwordUpperCaseLetters = confirm('Do you want to include uppercase letters (e.g. ABC)?');
+    passswordLowerCaseLetters = confirm('Do you want to include lowercase letters (e.g. abc)?');
+    passwordDigits = confirm('Do you want to include digits (e.g. 345)?');
+    passwordSymbols = confirm('Do you want to include digits (e.g. @#$%)?');
+    if ((passwordUpperCaseLetters === false) && (passswordLowerCaseLetters === false) && (passwordDigits === false) && (passwordSymbols === false)) {
+      alert('Please select at least one criteria!\nLet\'s go again!');
+    } else {
+      break;
+    }
+  }
 
   // Validate password criterias and concatenate variables to passwordCriteria variable
   if (passwordUpperCaseLetters) {
