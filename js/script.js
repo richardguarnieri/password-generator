@@ -19,7 +19,7 @@ const generatePassword = () => {
   const upperCaseletters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const lowerCaseletters = 'abcdefghijklmnopqrstuvwxyz';
   const digits = '0123456789';
-  const symbols = '!@#$%&';
+  const symbols = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
   let passwordLength = ''
   let passwordUpperCaseLetters = false;
   let passswordLowerCaseLetters = false;
