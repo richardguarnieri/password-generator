@@ -11,4 +11,4 @@ Link to the deployed application: https://richardguarnieri.github.io/password-ge
 
 ## Application Image
 ![Portfolio Application](./img/pwdGenImg.png)
-*Brief look at the page*
+*Brief look at the page using a randomly generated 128 password*
