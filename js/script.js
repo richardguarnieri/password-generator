@@ -45,7 +45,7 @@ const generatePassword = () => {
     passwordUpperCaseLetters = confirm('Do you want to include uppercase letters (e.g. ABC)?');
     passswordLowerCaseLetters = confirm('Do you want to include lowercase letters (e.g. abc)?');
     passwordDigits = confirm('Do you want to include digits (e.g. 345)?');
-    passwordSymbols = confirm('Do you want to include digits (e.g. @#$%)?');
+    passwordSymbols = confirm('Do you want to include symbols (e.g. @#$%)?');
     if ((passwordUpperCaseLetters === false) && (passswordLowerCaseLetters === false) && (passwordDigits === false) && (passwordSymbols === false)) {
       alert('Please select at least one criteria!\nLet\'s go again!');
     } else {
