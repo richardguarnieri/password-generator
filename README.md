@@ -82,10 +82,10 @@ Project Description: `A random password generator!`
     * [Prerequisites](#prerequisites)
 * [Contributing](#contributing)
 * [License](#license)
-* [Contact](#handshake-contact)
+* [Contact](#contact)
 * [Miscellaneous](#miscellaneous)
     * [User Story](#user-story)
-    * [Pseudocode](#pseudocode)
+    * [Acceptance Criteria](#acceptance-criteria)
 <br>
 
 
